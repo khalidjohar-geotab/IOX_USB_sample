@@ -17,10 +17,11 @@ def createMessage(message):
     message = message + check + bytes([0x03])
     return message
 
+
 # look for ttyUSB in Linux (ls /dev/tty\*)
-# with serial.Serial(port="/dev/ttyUSB1", baudrate = 9600, timeout = 60) as tester:
-# Use COMx in windows
-# with serial.Serial(port="COM7", baudrate = 9600, timeout = 60) as tester:
+with serial.Serial(port="/dev/ttyUSB1", baudrate=9600, timeout=60) as tester:
+    # Use COMx in windows
+    # with serial.Serial(port="COM7", baudrate = 9600, timeout = 60) as tester:
 
     # read sync char
     print("waiting for sync char...")
