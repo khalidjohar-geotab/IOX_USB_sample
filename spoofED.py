@@ -59,5 +59,5 @@ def createMessage(message):
 
         if len(readback) == 6 and readback[1] == 2:
             print("data ACK received")
-    Else:
+    else:
         print("invalid response")
